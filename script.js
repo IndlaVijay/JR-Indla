@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.classList.add('open');
     navBackdrop.classList.add('open');
     body.classList.add('menu-open');
-
+ 
     navToggle.classList.add('active');
 }
 
