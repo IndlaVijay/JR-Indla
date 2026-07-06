@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="icon" href="images/" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --ke-blue:#1565c0;
+      --ke-blue-dark:#0d47a1;
+      --ke-navy:#1a2b3c;
+      --ke-navy-dark:#0a1628;
+      --ke-orange:#e8962e;
+      --ke-green:#2ecc71;
+      --ke-white:#ffffff;
+      --ke-gray:#7a8a9e;
+      --ke-red:#e74c3c;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;color:var(--ke-navy-dark)}
+
+    .contact-page{
+      min-height:100vh;
+      padding:70px 20px;
+      background:
+        linear-gradient(90deg,rgba(255, 255, 255, 0.461),rgba(138, 184, 248, 0.283),rgba(255, 255, 255, 0.479)),
+        url('images/contact-bg.jpg') center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .contact-wrapper{
+      width:100%;
+      max-width:1180px;
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:55px;
+      align-items:center;
+    }
+
+    .contact-details{
+      animation:leftIn .8s ease both;
+    }
+
+    .contact-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:rgba(21,101,192,.1);
+      color:var(--ke-blue);
+      font-size:13px;
+      font-weight:800;
+      margin-bottom:18px;
+    }
+
+    .contact-details h1{
+      font-size:52px;
+      line-height:1.05;
+      font-weight:900;
+      color:var(--ke-navy-dark);
+      margin-bottom:18px;
+    }
+
+    .contact-details p{
+      max-width:560px;
+      font-size:17px;
+      line-height:1.7;
+      color:#506176;
+      margin-bottom:28px;
+    }
+
+    .contact-info-list{
+      display:grid;
+      gap:16px;
+      margin-bottom:30px;
+    }
+
+    .contact-info-item{
+      display:flex;
+      align-items:flex-start;
+      gap:14px;
+      /* background:rgba(255,255,255,.75); */
+      background: transparent;
+      border:1px solid rgba(255,255,255,.7);
+      backdrop-filter:blur(10px);
+      border-radius:16px;
+      padding:16px 18px;
+      max-width:520px;
+      box-shadow:0 10px 30px rgba(21,101,192,.08);
+    }
+
+    .contact-info-icon{
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      background:linear-gradient(135deg,#003f86,#728db5);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+    }
+
+    .contact-info-item h4{
+      font-size:15px;
+      font-weight:800;
+      margin-bottom:4px;
+    }
+
+    .contact-info-item a,
+    .contact-info-item span{
+      font-size:14px;
+      color:#52657a;
+      text-decoration:none;
+      line-height:1.5;
+    }
+
+    .contact-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .contact-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:14px 22px;
+      border-radius:12px;
+      text-decoration:none;
+      font-size:14px;
+      font-weight:800;
+      transition:.3s ease;
+    }
+
+    .contact-btn.primary{background:var(--ke-blue);color:white}
+    .contact-btn.secondary{background:white;color:var(--ke-blue);border:1.5px solid rgba(21,101,192,.2)}
+    .contact-btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(21,101,192,.22)}
+
+    @keyframes leftIn{from{opacity:0;transform:translateX(-35px)}to{opacity:1;transform:translateX(0)}}
+
+    /* SAME FORM STYLES */
+    .ke-form-logo{text-align:center}
+    .ke-form-logo .form-logo{display:inline-block}
+    .ke-form-title{text-align:center;font-size:14px;font-weight:800;color:var(--ke-navy-dark);margin-bottom:5px;letter-spacing:.3px}
+    .ke-form-subtitle{text-align:center;font-size:13px;color:var(--ke-gray);margin-bottom:24px}
+    .ke-form-group{margin-bottom:18px}
+    .ke-form-group label{display:block;font-size:13px;font-weight:600;color:var(--ke-navy);margin-bottom:6px}
+    .ke-required{color:var(--ke-red)}
+    .ke-form-group input,.ke-form-group textarea{width:100%;padding:12px 14px;border:1.5px solid #dde1e6;border-radius:10px;font-size:14px;font-family:'Inter',sans-serif;color:var(--ke-navy-dark);background:#fafbfc;transition:all .3s;outline:none;box-sizing:border-box}
+    .ke-form-group input:focus,.ke-form-group textarea:focus{border-color:var(--ke-blue);background:var(--ke-white);box-shadow:0 0 0 3px rgba(21,101,192,.1)}
+    .ke-form-group textarea{min-height:90px;resize:vertical}
+    .ke-form-group input.ke-input-error,.ke-form-group textarea.ke-input-error{border-color:var(--ke-red);background:#fef5f5;box-shadow:0 0 0 3px rgba(231,76,60,.08)}
+    .ke-form-group input.ke-input-success,.ke-form-group textarea.ke-input-success{border-color:var(--ke-green);background:#f5fef8}
+    .ke-error-msg{display:none;font-size:12px;color:var(--ke-red);margin-top:5px;font-weight:500;align-items:center;gap:4px}
+    .ke-error-msg.show{display:flex}
+    .ke-form-checkbox{display:flex;align-items:flex-start;gap:10px;margin-bottom:18px}
+    .ke-form-checkbox input[type="checkbox"]{width:18px;height:18px;margin-top:2px;accent-color:var(--ke-blue);flex-shrink:0;cursor:pointer}
+    .ke-form-checkbox label{font-size:12px;color:#666;line-height:1.5;cursor:pointer}
+    .ke-form-checkbox label a{color:var(--ke-blue);text-decoration:underline}
+    .ke-btn-send{width:100%;padding:14px;border:none;border-radius:10px;background:var(--ke-blue);color:var(--ke-white);font-size:15px;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;position:relative;overflow:hidden;transition:all .3s;display:flex;align-items:center;justify-content:center;min-height:50px}
+    .ke-btn-send:hover:not(:disabled){background:var(--ke-blue-dark);transform:translateY(-2px);box-shadow:0 6px 20px rgba(21,101,192,.3)}
+    .ke-btn-send:disabled{opacity:.7;cursor:not-allowed}
+    .ke-btn-send .ke-spinner,.ke-btn-send .ke-btn-success{display:none}
+    .ke-btn-send.loading .ke-btn-text{display:none}
+    .ke-btn-send.loading .ke-spinner{display:block}
+    .ke-btn-send.success .ke-btn-text{display:none}
+    .ke-btn-send.success .ke-btn-success{display:inline-flex}
+    .ke-btn-send.success{background:var(--ke-green)}
+    .ke-spinner{width:22px;height:22px;border:3px solid rgba(255,255,255,.3);border-top-color:var(--ke-white);border-radius:50%;animation:keSpin .7s linear infinite}
+    @keyframes keSpin{to{transform:rotate(360deg)}}
+    .ke-form-secure{text-align:center;font-size:11px;color:#999;margin-top:14px}
+    .ke-form-secure i{margin-right:4px;color:var(--ke-green)}
+    .ke-modal-success{display:none;text-align:center;padding:10px 0;background:white;border-radius:20px;width:400px;padding:30px;box-shadow:0 20px 60px rgba(0,0,0,.15)}
+    .ke-modal-success.show{display:block;animation:keFadeUp .5s ease}
+    @keyframes keFadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .ke-success-icon{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#2ecc71,#27ae60);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:28px;color:white;box-shadow:0 8px 25px rgba(46,204,113,.3)}
+    .ke-modal-success h3{font-size:20px;font-weight:800;color:var(--ke-navy-dark);margin-bottom:6px}
+    .ke-modal-success>p{font-size:14px;color:var(--ke-gray);margin-bottom:20px}
+    .ke-success-detail{background:#f7f9fb;border-radius:12px;padding:16px;margin-bottom:20px;text-align:left}
+    .ke-success-row{display:flex;justify-content:space-between;padding:8px 0;font-size:13px;border-bottom:1px solid #eaeef2}
+    .ke-success-row:last-child{border-bottom:none}
+    .ke-label{color:var(--ke-gray);font-weight:600}
+    .ke-value{color:var(--ke-navy-dark);font-weight:500;text-align:right;max-width:60%;word-break:break-word}
+    .ke-success-phone{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:var(--ke-blue);text-decoration:none;margin-bottom:12px;transition:color .3s}
+    .ke-success-phone:hover{color:var(--ke-blue-dark)}
+    .ke-btn-close-success{border:none;background:transparent;color:var(--ke-navy);font-size:14px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:all .3s}
+    .ke-btn-close-success:hover{text-decoration:underline}
+    .ke-toast{position:fixed;bottom:30px;right:30px;background:var(--ke-navy-dark);color:var(--ke-white);padding:14px 20px;border-radius:10px;display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;box-shadow:0 8px 30px rgba(0,0,0,.25);z-index:10001;transform:translateY(100px);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);max-width:360px}
+    .ke-toast.show{transform:translateY(0);opacity:1}
+    .ke-toast-icon{color:var(--ke-green);font-size:18px;flex-shrink:0}
+    .ke-toast-close{background:none;border:none;color:rgba(255,255,255,.5);font-size:18px;cursor:pointer;margin-left:6px;padding:0 4px;transition:color .2s}
+    .ke-toast-close:hover{color:white}
+
+    #keFormContainer{
+      padding:30px;
+      width:400px;
+      border-radius:20px;
+      box-shadow:0 20px 60px rgba(0,0,0,.15);
+      /* background:rgba(255,255,255,.97); */
+      background:transparent;
+      backdrop-filter:blur(2px);
+      animation:heroCardIn .8s cubic-bezier(.16,1,.3,1) .2s both;
+    }
+    @keyframes heroCardIn{from{opacity:0;transform:translateY(30px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+    @keyframes keShake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+
+    @media(max-width:900px){
+      .contact-page{padding:40px 16px}
+      .contact-wrapper{grid-template-columns:1fr;gap:35px}
+      .contact-details h1{font-size:36px}
+      .contact-details p,.contact-info-item{max-width:100%}
+      .contact-actions{justify-content:center}
+      #keFormContainer,.ke-modal-success{width:100%}
+    }
+  </style>
+</head>
+<body>
+    <div id="site-header"></div>
+    <!-- Breadcrumb -->
+  <div class="breadcrumb-bar">
+    <span><a href="index.html">Home</a> / <span class="current">Contact Us</span></span>
+  </div>
+
+  <main class="contact-page">
+    <div class="contact-wrapper">
+      <section class="contact-details">
+        <div class="contact-badge"><i class="fas fa-headset"></i> Contact K&E Home Improvement</div>
+        <h1>Let’s Talk About Your Project</h1>
+        <p>Have questions or need a free quote? Send your details and we will get back to you within 24 hours.</p>
+
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+            <div><h4>Phone</h4><a href="tel:5855005027">(585) 500-5027</a></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+            <div><h4>Email</h4><a href="mailto:varmavijay259@gmail.com">varmavijay259@gmail.com</a></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-location-dot"></i></div>
+            <div><h4>Service Area</h4><span>Rochester, NY and nearby areas</span></div>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <a href="tel:5855005027" class="contact-btn primary"><i class="fas fa-phone"></i> Call Now</a>
+          <a href="mailto:varmavijay259@gmail.com" class="contact-btn secondary"><i class="fas fa-envelope"></i> Email Us</a>
+        </div>
+      </section>
+
+      <section class="contact-form-side">
+        <div id="keFormContainer">
+          <div class="ke-form-logo">
+            <div class="form-logo">
+              <img src="images/ke-logo.png" alt="K&E Logo" style="width:80px;height:auto;object-fit:contain">
+            </div>
+          </div>
+          <h2 class="ke-form-title">GET A FREE QUOTE</h2>
+          <p class="ke-form-subtitle">Tell us about your project — we respond within 24 hours</p>
+
+          <form id="keQuoteForm" novalidate autocomplete="on">
+            <div class="ke-form-group">
+              <label for="keFullName">Full Name <span class="ke-required">*</span></label>
+              <input type="text" id="keFullName" name="name" placeholder="John Smith" required autocomplete="name" maxlength="80">
+              <div class="ke-error-msg" id="keFullNameErr"><i class="fas fa-exclamation-circle"></i> Please enter your full name</div>
+            </div>
+
+            <div class="ke-form-group">
+              <label for="kePhone">Phone <span class="ke-required">*</span></label>
+              <input type="tel" id="kePhone" name="phone" placeholder="(585) 555-1234" required autocomplete="tel" maxlength="16">
+              <div class="ke-error-msg" id="kePhoneErr"><i class="fas fa-exclamation-circle"></i> Please enter a valid 10-digit phone number</div>
+            </div>
+
+            <div class="ke-form-group">
+              <label for="keMessage">Short message about your needs <span class="ke-required">*</span></label>
+              <textarea id="keMessage" name="message" placeholder="Describe what needs to be done, approximate size, timeline..." required maxlength="1000"></textarea>
+              <div class="ke-error-msg" id="keMessageErr"><i class="fas fa-exclamation-circle"></i> Please describe your project (min 5 characters)</div>
+            </div>
+
+            <div class="ke-form-checkbox" id="keTermsGroup">
+              <input type="checkbox" id="keTerms" name="terms" required>
+              <label for="keTerms">I agree to <a href="terms.html" onclick="event.stopPropagation()">terms &amp; conditions</a> provided by the company. By providing my phone number, I agree to receive text messages from the business.</label>
+            </div>
+            <div class="ke-error-msg" id="keTermsErr" style="margin-top:-14px;margin-bottom:16px"><i class="fas fa-exclamation-circle"></i> You must agree to the terms to continue</div>
+
+            <button type="submit" class="ke-btn-send" id="keSendBtn">
+              <span class="ke-btn-text"><i class="fas fa-paper-plane" style="margin-right:8px"></i>SEND REQUEST</span>
+              <div class="ke-spinner"></div>
+              <span class="ke-btn-success"><i class="fas fa-check" style="margin-right:6px"></i>SENT!</span>
+            </button>
+
+            <div class="ke-form-secure"><i class="fas fa-lock"></i> Your information is secure and never shared</div>
+          </form>
+        </div>
+
+        <div class="ke-modal-success" id="keFormSuccess">
+          <div class="ke-success-icon"><i class="fas fa-check"></i></div>
+          <h3>Request Submitted!</h3>
+          <p>Thank you! We'll contact you within 24 hours.</p>
+          <div class="ke-success-detail">
+            <div class="ke-success-row"><span class="ke-label">Name</span><span class="ke-value" id="keSuccessName"></span></div>
+            <div class="ke-success-row"><span class="ke-label">Phone</span><span class="ke-value" id="keSuccessPhone"></span></div>
+            <div class="ke-success-row"><span class="ke-label">Message</span><span class="ke-value" id="keSuccessMessage"></span></div>
+          </div>
+          <a href="tel:5855005027" class="ke-success-phone"><i class="fas fa-phone"></i> (585) 500-5027</a><br>
+          <button class="ke-btn-close-success" id="keCloseSuccess">Close</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="ke-toast" id="keToast">
+    <i class="fas fa-check-circle ke-toast-icon"></i>
+    <span id="keToastMsg">Message sent successfully!</span>
+    <button class="ke-toast-close" id="keToastClose">&times;</button>
+  </div>
+
+<div id="site-footer"></div>
+
+<script src="partials.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    (function(){
+      'use strict';
+      var CFG={toastDuration:4000,formEndpoint:'https://formsubmit.co/ajax/varmavijay259@gmail.com',emailSubject:'New Estimate Request — K&E Home Improvement',captcha:false,template:'table'};
+      function formatPhone(v){var d=v.replace(/\D/g,'');if(!d.length)return'';if(d.length<=3)return '('+d;if(d.length<=6)return '('+d.slice(0,3)+') '+d.slice(3);return '('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6,10)}
+      function okName(v){return v.trim().length>=2} function okPhone(v){return v.replace(/\D/g,'').length===10} function okMsg(v){return v.trim().length>=5}
+      function showErr(inp,err){if(inp){inp.classList.add('ke-input-error');inp.classList.remove('ke-input-success')} if(err)err.classList.add('show')}
+      function clearErr(inp,err){if(inp)inp.classList.remove('ke-input-error','ke-input-success');if(err)err.classList.remove('show')}
+      function markOk(inp,err){if(inp){inp.classList.remove('ke-input-error');inp.classList.add('ke-input-success')} if(err)err.classList.remove('show')}
+      var E={form:document.getElementById('keQuoteForm'),container:document.getElementById('keFormContainer'),name:document.getElementById('keFullName'),phone:document.getElementById('kePhone'),msg:document.getElementById('keMessage'),terms:document.getElementById('keTerms'),nameErr:document.getElementById('keFullNameErr'),phoneErr:document.getElementById('kePhoneErr'),msgErr:document.getElementById('keMessageErr'),termsErr:document.getElementById('keTermsErr'),btn:document.getElementById('keSendBtn'),success:document.getElementById('keFormSuccess'),sName:document.getElementById('keSuccessName'),sPhone:document.getElementById('keSuccessPhone'),sMsg:document.getElementById('keSuccessMessage'),closeSuc:document.getElementById('keCloseSuccess'),toast:document.getElementById('keToast'),toastMsg:document.getElementById('keToastMsg'),toastClose:document.getElementById('keToastClose')};
+      var toastTimer;function showToast(msg){if(msg)E.toastMsg.textContent=msg;E.toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(function(){E.toast.classList.remove('show')},CFG.toastDuration)}
+      function validate(){var ok=true;if(!okName(E.name.value)){showErr(E.name,E.nameErr);ok=false}else markOk(E.name,E.nameErr);if(!okPhone(E.phone.value)){showErr(E.phone,E.phoneErr);ok=false}else markOk(E.phone,E.phoneErr);if(!okMsg(E.msg.value)){showErr(E.msg,E.msgErr);ok=false}else markOk(E.msg,E.msgErr);if(!E.terms.checked){E.termsErr.classList.add('show');ok=false}else E.termsErr.classList.remove('show');return ok}
+      E.phone.addEventListener('input',function(){this.value=formatPhone(this.value)});
+      E.name.addEventListener('blur',function(){if(this.value.trim())okName(this.value)?markOk(this,E.nameErr):showErr(this,E.nameErr)});
+      E.phone.addEventListener('blur',function(){if(this.value.trim())okPhone(this.value)?markOk(this,E.phoneErr):showErr(this,E.phoneErr)});
+      E.msg.addEventListener('blur',function(){if(this.value.trim())okMsg(this.value)?markOk(this,E.msgErr):showErr(this,E.msgErr)});
+      E.terms.addEventListener('change',function(){if(this.checked)E.termsErr.classList.remove('show')});
+      E.form.addEventListener('submit',function(e){
+        e.preventDefault();
+        if(!validate()){var f=E.form.querySelector('.ke-input-error');if(f){f.style.animation='none';f.offsetHeight;f.style.animation='keShake .4s ease';f.focus()}return}
+        E.btn.classList.add('loading');E.btn.disabled=true;
+        var data={name:E.name.value.trim(),phone:E.phone.value.trim(),message:E.msg.value.trim()};
+        fetch(CFG.formEndpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({Name:data.name,Phone:data.phone,Message:data.message,_subject:CFG.emailSubject,_captcha:String(CFG.captcha),_template:CFG.template,_source:'Contact Page'})})
+        .then(function(r){if(!r.ok)throw new Error('Server '+r.status);return r.json()})
+        .then(function(result){if(!result.success)throw new Error(result.message||'Submission failed');E.btn.classList.remove('loading');E.btn.classList.add('success');setTimeout(function(){E.sName.textContent=data.name;E.sPhone.textContent=data.phone;E.sMsg.textContent=data.message;E.container.style.display='none';E.success.classList.add('show')},600);showToast('✅ Estimate request sent successfully!')})
+        .catch(function(){E.btn.classList.remove('loading');E.btn.disabled=false;showToast('⚠️ Something went wrong. Please try again.')});
+      });
+      E.closeSuc.addEventListener('click',function(){E.form.reset();clearErr(E.name,E.nameErr);clearErr(E.phone,E.phoneErr);clearErr(E.msg,E.msgErr);E.termsErr.classList.remove('show');E.btn.classList.remove('loading','success');E.btn.disabled=false;E.success.classList.remove('show');E.container.style.display=''})
+      E.toastClose.addEventListener('click',function(){E.toast.classList.remove('show')});
+    })();
+  </script>
+
+</body>
+</html>
