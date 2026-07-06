@@ -1,377 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JR Indla - Web Development Services</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-  <div id="site-header"></div>
-
-  <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src="images/video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <!-- <div class="hero-overlay"></div> -->
-    <div class="hero-content">
-      <h1>Get Your Website Ready at low price Starting @<span style="color: #ff7b00;"> Rs.5999</span> only.</h1>
-      <p>Choose the best website designer for your small business.</p>
-      <button class="btn-contact-us">Contact Us</button>
-    </div>
-
-  </section>
-
-
-  <!-- work with  -->
-
-  <section class="work">
-    <div class="work-header">
-      <p>JR INDLA</p>
-
-      <h1>Work With</h1>
-    </div>
-    <div class="work-pin">
-      <div class="work-card"><span>01</span>
-        <h2>Web Development</h2>
-        <p>Custom responsive websites and scalable web applications.</p>
-      </div>
-      <div class="work-card"><span>02</span>
-        <h2>UI / UX Design</h2>
-        <p>Beautiful user interfaces with smooth user experiences.</p>
-      </div>
-      <div class="work-card"><span>03</span>
-        <h2>SEO Optimization</h2>
-        <p>Increase visibility and drive more organic traffic.</p>
-      </div>
-      <div class="work-card"><span>04</span>
-        <h2>Digital Marketing</h2>
-        <p>Marketing strategies that convert visitors into customers.</p>
-      </div>
-      <div class="work-card"><span>05</span>
-        <h2>Maintenance</h2>
-        <p>Reliable support, updates and performance optimization.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- SERVICES -->
-
-  <section class="services">
-    <div class="services-header">
-      <p>JR INDLA</p>
-
-      <h1>Our Services</h1>
-    </div>
-
-    <div class="pin">
-      <div class="cards">
-        <!-- CARD 1 -->
-        <div class="card">
-          <div class="left">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200">
-          </div>
-          <div class="right">
-            <div class="top">
-              <span>01</span>
-              <span>WEB DEVELOPMENT</span>
-            </div>
-            <h2>Build Fast Websites</h2>
-            <p>Modern responsive websites with premium user experience and lightning-fast performance.</p>
-            <div class="features">
-              <div class="feature">
-                <i class="fas fa-code"></i>
-                <span>React</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-mobile-alt"></i>
-                <span>Responsive</span>
-              </div>
-            </div>
-            <a href="#" class="button">
-              Learn More
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="card">
-          <div class="left">
-            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200">
-          </div>
-          <div class="right">
-            <div class="top">
-              <span>02</span>
-              <span>UI / UX DESIGN</span>
-            </div>
-            <h2>Beautiful Experiences</h2>
-            <p>Elegant interfaces designed for engagement, usability and conversions.</p>
-            <div class="features">
-              <div class="feature">
-                <i class="fas fa-palette"></i>
-                <span>Figma</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-pen-ruler"></i>
-                <span>Prototype</span>
-              </div>
-            </div>
-            <a href="#" class="button">
-              Learn More
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="card">
-          <div class="left">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200">
-          </div>
-          <div class="right">
-            <div class="top">
-              <span>03</span>
-              <span>SEO OPTIMIZATION</span>
-            </div>
-            <h2>Grow Your Business</h2>
-            <p>Increase rankings, improve visibility and drive qualified traffic through powerful SEO strategies.</p>
-            <div class="features">
-              <div class="feature">
-                <i class="fas fa-chart-line"></i>
-                <span>Google SEO</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-search"></i>
-                <span>Analytics</span>
-              </div>
-            </div>
-            <a href="#" class="button">
-              Learn More
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- CARD 4 -->
-        <div class="card">
-          <div class="left">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200">
-          </div>
-          <div class="right">
-            <div class="top">
-              <span>04</span>
-              <span>DIGITAL MARKETING</span>
-            </div>
-            <h2>Reach More Customers</h2>
-            <p>Performance marketing campaigns designed to maximize ROI and generate quality leads.</p>
-            <div class="features">
-              <div class="feature">
-                <i class="fas fa-bullhorn"></i>
-                <span>Ads</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-users"></i>
-                <span>Leads</span>
-              </div>
-            </div>
-            <a href="#" class="button">
-              Learn More
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-
-        <!-- CARD 4 -->
-        <div class="card">
-          <div class="left">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200">
-          </div>
-          <div class="right">
-            <div class="top">
-              <span>04</span>
-              <span>DIGITAL MARKETING</span>
-            </div>
-            <h2>Reach More Customers</h2>
-            <p>Performance marketing campaigns designed to maximize ROI and generate quality leads.</p>
-            <div class="features">
-              <div class="feature">
-                <i class="fas fa-bullhorn"></i>
-                <span>Ads</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-users"></i>
-                <span>Leads</span>
-              </div>
-            </div>
-            <a href="#" class="button">
-              Learn More
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-
-        <!-- CARD 4 -->
-        <div class="card">
-          <div class="left">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200">
-          </div>
-          <div class="right">
-            <div class="top">
-              <span>04</span>
-              <span>DIGITAL MARKETING</span>
-            </div>
-            <h2>Reach More Customers</h2>
-            <p>Performance marketing campaigns designed to maximize ROI and generate quality leads.</p>
-            <div class="features">
-              <div class="feature">
-                <i class="fas fa-bullhorn"></i>
-                <span>Ads</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-users"></i>
-                <span>Leads</span>
-              </div>
-            </div>
-            <a href="#" class="button">
-              Learn More
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- CARD 5 -->
-        <div class="card">
-          <div class="left">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200">
-          </div>
-          <div class="right">
-            <div class="top">
-              <span>05</span>
-              <span>24/7 SUPPORT</span>
-            </div>
-            <h2>Always Here For You</h2>
-            <p>Reliable maintenance, security updates and continuous technical support whenever you need it.</p>
-            <div class="features">
-              <div class="feature">
-                <i class="fas fa-headset"></i>
-                <span>Support</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-shield-alt"></i>
-                <span>Security</span>
-              </div>
-            </div>
-            <a href="#" class="button">
-              Learn More
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <div id="site-footer"></div>
-
-  <script src="partials.js"></script>
-  <script src="script.js"></script>
-
-  <!-- GSAP ScrollTrigger -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-  <script>
-    // Work with 
-
-    gsap.registerPlugin(ScrollTrigger);
-    const workCards = gsap.utils.toArray(".work-card");
-    workCards.forEach((c, i) => gsap.set(c, { y: i ? 120 : 0, opacity: i ? 0 : 1, scale: i ? .9 : 1, rotation: i ? 4 : 0, filter: i ? "blur(8px)" : "blur(0px)", zIndex: workCards.length - i }));
-    const tl = gsap.timeline({ scrollTrigger: { trigger: ".work", start: "top top", end: "+=" + workCards.length * 100 + "%", scrub: 1, pin: ".work-pin", anticipatePin: 1 } });
-    for (let i = 1; i < workCards.length; i++) {
-      tl.to(workCards[i - 1], { opacity: 0, scale: .82, y: -120, rotation: -6, filter: "blur(8px)", duration: 1, ease: "power2.inOut" }, "s" + i);
-      tl.fromTo(workCards[i], { opacity: 0, y: 120, scale: .9, rotation: 6, filter: "blur(8px)" }, { opacity: 1, y: 0, scale: 1, rotation: 0, filter: "blur(0px)", duration: 1, ease: "power3.out" }, "s" + i);
-    }
+document.addEventListener('DOMContentLoaded', () => {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const navBackdrop = document.querySelector('.nav-backdrop');
+  const body = document.body;
 
 
 
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    navBackdrop.classList.remove('open');
+    body.classList.remove('menu-open');
 
-    gsap.registerPlugin(ScrollTrigger);
+    navToggle.classList.remove('active');
+}
 
-    const cards = gsap.utils.toArray(".card");
-    const container = document.querySelector(".cards");
+  function openMenu() {
+    navLinks.classList.add('open');
+    navBackdrop.classList.add('open');
+    body.classList.add('menu-open');
 
-    const totalWidth = container.scrollWidth - window.innerWidth;
+    navToggle.classList.add('active');
+}
 
-    gsap.to(container, {
-
-      x: -totalWidth,
-
-      ease: "none",
-
-      scrollTrigger: {
-
-        trigger: ".services",
-
-        start: "top top",
-
-        end: () => "+=" + totalWidth,
-
-        pin: true,
-
-        scrub: 1,
-
-        anticipatePin: 1,
-
-        invalidateOnRefresh: true
-
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      if (navLinks.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
       }
-
     });
+  }
 
-    /* Card animation */
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', closeMenu);
+  }
 
-    cards.forEach((card) => {
+  // Dropdown submenu toggles (mobile accordion, desktop hover handled by CSS)
+  document.querySelectorAll('.nav-item.has-children .nav-link-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        const parent = btn.closest('.nav-item');
+        const isOpen = parent.classList.contains('open');
+        document.querySelectorAll('.nav-item.has-children').forEach(item => item.classList.remove('open'));
+        if (!isOpen) parent.classList.add('open');
+      }
+    });
+  });
 
-      gsap.from(card, {
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      closeMenu();
+    }
+  });
 
-        scale: .92,
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const dots = document.querySelectorAll('.testimonial-dots .dot');
 
-        opacity: .4,
-
-        duration: 1,
-
-        scrollTrigger: {
-
-          trigger: card,
-
-          containerAnimation: ScrollTrigger.getAll()[0],
-
-          start: "left center",
-
-          end: "center center",
-
-          scrub: true
-
-        }
-
+  // FAQ accordion (About page)
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('active');
+        i.querySelector('.faq-arrow').textContent = '⌄';
       });
-
+      if (!isOpen) {
+        item.classList.add('active');
+        item.querySelector('.faq-arrow').textContent = '⌃';
+      }
     });
+  });
+
+  let currentSlide = 0;
+  let slideInterval;
+
+  function showSlide(index) {
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    const next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  }
+
+  function startAutoSlide() {
+    slideInterval = setInterval(nextSlide, 5000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(slideInterval);
+    startAutoSlide();
+  }
+
+  if (slides.length && dots.length) {
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        showSlide(parseInt(dot.getAttribute('data-index'), 10));
+        resetAutoSlide();
+      });
+    });
+    startAutoSlide();
+  }
+
+  const learnMoreBtn = document.querySelector('.btn-learn-more');
+  if (learnMoreBtn) {
+    learnMoreBtn.addEventListener('click', () => {
+      alert('Learn more about Auxochromofours!');
+    });
+  }
+
+  // Animate metric numbers counting up on scroll into view
+  const counters = document.querySelectorAll('.count-num');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseFloat(el.getAttribute('data-count'));
+        const suffix = el.getAttribute('data-suffix') || '';
+        const decimals = parseInt(el.getAttribute('data-decimal') || '0', 10);
+        const duration = 1500;
+        const startTime = performance.now();
+
+        function tick(now) {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const value = target * eased;
+          el.textContent = decimals > 0 ? value.toFixed(decimals) : Math.round(value);
+          if (decimals === 0) {
+            el.textContent = Math.round(value) + suffix;
+          } else {
+            el.textContent = value.toFixed(decimals) + suffix;
+          }
+          if (progress < 1) {
+            requestAnimationFrame(tick);
+          } else {
+            el.textContent = (decimals > 0 ? target.toFixed(decimals) : target) + suffix;
+          }
+        }
+        requestAnimationFrame(tick);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  counters.forEach(c => counterObserver.observe(c));
+
+});
 
 
-
-
-  </script>
-</body>
-
-</html>
